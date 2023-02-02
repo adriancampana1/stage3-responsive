@@ -26,8 +26,6 @@
 body {
     font-family: var(--ff-secondary);
 
-    max-width: 39rem;
-
     margin: 0 auto;
 
     position: relative;
@@ -40,10 +38,8 @@ body {
 header {
     background-color: var(--bg-heading);
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
 }
 
 header h1 {
@@ -79,10 +75,11 @@ img {
 }
 
 main {
-    margin: 1.4rem 3.2rem 0;
-    max-width: 39rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    padding-bottom: 5rem;
+    padding: 1.8rem 3.2rem 6rem;
 }
 
 main p {
@@ -92,21 +89,28 @@ main p {
     line-height: 1.5rem;
 
     text-align: center;
-    margin-bottom: 6rem;
 }
 
-.card {
+.cards {
+    display: grid;
+    gap: 3.2rem;
+    margin-top: 5rem;
+}
+
+.cards .card {
     position: relative;
+
+    width: 32rem;
+
+    height: fit-content;
 
     transition: all 200ms;
 }
 
-.card + .card {
-    margin-top: 3.6rem;
-}
+.cards .card img {
+    width: 100%;
 
-.card img {
-    border-radius: 20px;
+    border-radius: 2rem;
 
     animation: downtop 700ms forwards;
 }
