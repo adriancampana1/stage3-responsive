@@ -67,9 +67,18 @@
         </div>
         <footer>
             <p>fale concosco no instagram <a href="#">@space_cream</a></p>
-            <script src="js/preloader.js"></script>
+
         </footer>
     </main>
+    <script>
+        $(window).on('load', function () {
+            $('#preloader .inner').fadeOut();
+            $('#preloader').delay(10).fadeOut('slow');
+            $('body').delay(10).css({
+                'overflow': 'visible'
+            });
+        })
+    </script>
 
 
 </body>
